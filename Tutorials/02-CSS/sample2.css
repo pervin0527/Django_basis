@@ -1,0 +1,10 @@
+div {
+  background-color: orange;
+  border-style: dashed;
+  border-width: 20px;
+  color: blue;
+}
+
+span {
+  color: red;
+}
