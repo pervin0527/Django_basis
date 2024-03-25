@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>variable.html</h1>
+
+    <h2>{{some_list}}, {{some_list.0}}</h2>
+    <h2>Some List</h2>
+    <p>{{some_list | length}}</p>
+    <ul>
+      {% for item in some_list %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Some Dictionary</h2>
+    <p>Inside Key's Value: {{ some_dict.inside_key }}</p>
+    <p>{# this is a comment #}</p>
+  </body>
+</html>
