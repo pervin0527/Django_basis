@@ -9,6 +9,7 @@
 
     <h2>{{some_list}}, {{some_list.0}}</h2>
     <h2>Some List</h2>
+
     <p>{{some_list | length}}</p>
     <ul>
       {% for item in some_list %}
@@ -19,5 +20,13 @@
     <h2>Some Dictionary</h2>
     <p>Inside Key's Value: {{ some_dict.inside_key }}</p>
     <p>{# this is a comment #}</p>
+
+    {% if user_logged_in %}
+    <h1>Welcome back you are logged in</h1>
+
+    {%else %}
+    <h1>Please Loggin</h1>
+
+    {% endif %}
   </body>
 </html>
