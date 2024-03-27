@@ -13,3 +13,7 @@ def variable_view(request):
               'user_logged_in' : False}
 
     return render(request, 'first_app/variable.html', context=my_var)
+
+
+def test_view(request):
+    return render(request, 'first_app/other.html')

@@ -19,5 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('first_app/', include('first_app.urls'))
+    path('first_app/', include('first_app.urls')),
 ]
+
+handler404 = 'about_template.views.custom_not_found_view'
