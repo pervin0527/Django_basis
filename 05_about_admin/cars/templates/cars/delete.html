@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block content %}
+<div class="container">
+    <h1>Enter the Primary Key to delete Car.</h1>
+    <form action="", method="POST">
+        {% csrf_token %}
+        <div class="form_group">
+            <label for="primary_key">Primary Key</label>
+            <input class="form-control" type="text" id="primary_key" name="primary_key">
+        </div>
+        <input class="btn btn-primary" type="submit">
+    </form>
+
+</div>
+{% endblock %}
