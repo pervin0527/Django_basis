@@ -15,4 +15,18 @@ class ReviewForm(ModelForm):
     ## ReviewModel에 대한 Form을 생성.
     class Meta:
         model = ReviewModel
-        fields = ["first_name", "last_name", "stars"]
+        # fields = ["first_name", "last_name", "stars"]
+        fields = "__all__" ## 자동으로 모든 모델 필드를 폼 필드로 전달(또는 맵핑) 하라는 것.
+
+        labels = {
+            'first_name' : "Your First Name",
+            'last_name' : "Last Name",
+            'stars' : "Rating"
+        }
+
+        error_messages = {
+            'stars' : {
+                'min_value' : "MIN VALUE is 1",
+                'max_value' : "MAX VALUE is 5"
+            }
+        }

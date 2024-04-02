@@ -16,33 +16,20 @@
 </head>
 <body>
     <h1>rental</h1>
-    <form action="", method="POST">
-        {% csrf_token %}
-
-        <!-- Option 1 -->
-        <!-- {{form.as_p}} -->
-
-        <!-- <div> -->
-            <!-- {{form.first_name.label_tag}} {{form.first_name}} -->
-        <!-- </div> -->
-
-
-        <!-- Option 2 -->
-        <!-- <div> -->
-            <!-- {{form.last_name.label_tag}} {{form.last_name}} -->
-        <!-- </div> -->
-
-        <!-- Option 3 -->
-        <div class="container ">
+    <div class="container">
+        <form action="", method="POST">
+            
+            {% csrf_token %}
             {% for field in form %}
-            <div class="mb-3">
-                {{field.label_tag}} {{field}}
-            </div>
+                <div class="mb-3">
+                    {{field.label_tag}}
+                </div>
+                {{field}}
+                {{field.errors}}
             {% endfor %}
-        </div>
-
-        <input type="submit">
-    </form>
+            <input type="submit">
+        </form>
+    </div>
     
 </body>
 </html>
