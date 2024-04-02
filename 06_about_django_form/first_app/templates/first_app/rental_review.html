@@ -20,20 +20,20 @@
         {% csrf_token %}
 
         <!-- Option 1 -->
-        {{form.as_p}}
+        <!-- {{form.as_p}} -->
 
-        <div>
-            {{form.first_name.label_tag}} {{form.first_name}}
-        </div>
+        <!-- <div> -->
+            <!-- {{form.first_name.label_tag}} {{form.first_name}} -->
+        <!-- </div> -->
 
 
         <!-- Option 2 -->
-        <div>
-            {{form.last_name.label_tag}} {{form.last_name}}
-        </div>
+        <!-- <div> -->
+            <!-- {{form.last_name.label_tag}} {{form.last_name}} -->
+        <!-- </div> -->
 
         <!-- Option 3 -->
-        <div class="container myform">
+        <div class="container ">
             {% for field in form %}
             <div class="mb-3">
                 {{field.label_tag}} {{field}}

@@ -10,7 +10,8 @@ def rental_review_view(request):
         form = ReviewForm(request.POST)
 
         if form.is_valid():
-            print(form.cleaned_data)
+            # print(form.cleaned_data)
+            form.save()
             return redirect(reverse('first_app:thank_you'))
     
     else:
