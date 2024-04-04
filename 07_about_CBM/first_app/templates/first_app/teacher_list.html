@@ -1,0 +1,6 @@
+<h1>List of Teachers</h1>
+<ul>
+    {% for teacher in teachers_list %}
+    <li>{{teacher.first_name}}, {{teacher.last_name}}</li>
+    {% endfor %}
+</ul>
