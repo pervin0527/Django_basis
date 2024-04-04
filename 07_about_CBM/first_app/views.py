@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, FormView, CreateView, ListView
+from django.views.generic import TemplateView, FormView, CreateView, ListView, DetailView, UpdateView, DeleteView
 from .forms import ContactForm
 from .models import Teacher
 
@@ -42,3 +42,25 @@ class TeacherListView(ListView):
     ## ListView의 기본작업은 model.objects.all()이지만 queryset을 커스터마이징 할 수도 있다.
     # queryset = Teacher.objects.all() ## default
     queryset = Teacher.objects.order_by('first_name') ## Query를 커스터마이징 하거나, 필터링을 적용할 수 있음.
+
+
+class TeacherDetailView(DetailView):
+    ## model_detail.html
+    ## DetailView는 오직 하나의 데이터(레코드)만을 가져온다.
+    model = Teacher
+
+
+class TeacherUpdateView(UpdateView):
+    ## 단 하나의 데이터(레코드)에 대해서만 업데이트를 수행.
+    model = Teacher
+
+    ## CreateView에서 사용하는 model_form.html을 활용함.(공유함)
+    fields = "__all__" ## ['subject']
+    success_url = reverse_lazy('first_app:teachers_list')
+
+
+class TeacherDeletView(DeleteView):
+    model = Teacher
+
+    ## model_confirm_delete.html
+    success_url = reverse_lazy('first_app:teachers_list')
