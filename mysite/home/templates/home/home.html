@@ -6,27 +6,28 @@
 <link rel="stylesheet" href="{% static 'home/home.css' %}">
 
 <main>
-  <h1> Welcome!! </h1>
+  <h2> Minjun Kim </h2>
+  <h3>Machine Learning Engineer</h3>
 
-  <div class="content-wrapper">
-    <img src="{% static 'home/dog.jpg' %}" class="profile_image" alt="Dog Image"> 
-  
-    <table class="my_links">
-      <tr>
-        <th>플랫폼</th>
-        <th>링크</th>
-      </tr>
-      <tr>
-        <td>GitHub</td>
-        <td><a href="https://github.com/pervin0527" target="_blank">pervin0527</a></td>
-      </tr>
-      <tr>
-        <td>LinkedIn</td>
-        <td><a href="https://www.linkedin.com/in/pervin0527/" target="_blank">pervin0527</a></td>
-      </tr>
-    </table>
+  <div class="about-section">
+    <div class="about-container">
+      <div class="about-title">
+        <span>ABOUT ME</span>
+      </div>
+      <div class="about-content">
+        <div class="about-profile-image">
+          <img src="{% static 'home/moto.jpeg' %}" alt="Profile Image">
+        </div>
+        <div class="about-description">
+          
+          <p>여기에 자기소개 텍스트를 입력하세요...</p>
+        </div>
+      </div>
+    </div>
   </div>
+  
+  
 
-</main>
+</main>   
 
 {% endblock content %}

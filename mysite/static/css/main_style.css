@@ -1,4 +1,41 @@
 main {
-    padding-left: 30px;
-    padding-right: 30px;
+  padding-left: 120px; /* 왼쪽 여백 */
+  padding-right: 120px; /* 오른쪽 여백 */
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+  margin-right: 100px;
+}
+
+.nav-item {
+  margin: 0 10px; /* 네비게이션 아이템 사이의 여백 */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em; /* 폰트 크기 조정 */
+}
+
+.nav-icon {
+  height: 40px;
+  width: 40px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-item + .nav-item {
+    margin-top: 10px;
+  }
+
+  .nav-icon {
+    margin-bottom: 5px; /* 아이콘과 텍스트 사이의 여백 */
+  }
 }
